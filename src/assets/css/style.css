@@ -1,0 +1,140 @@
+@charset "UTF-8";
+button {
+  outline: none !important;
+}
+
+/* Categorias de productos */
+.container-general-categorias .container-categorias .ms {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.container-general-categorias .container-categorias .ms:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+}
+
+.container-general-categorias .container-categorias .link-categ {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container-general-categorias .container-categorias .link-categ:hover {
+  cursor: pointer;
+}
+
+.container-general-categorias .container-categorias .link-categ .card {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.container-general-categorias .container-categorias .link-categ .card:hover {
+  -webkit-box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+}
+
+.container-general-categorias .container-categorias .img-categ {
+  width: 100%;
+  height: 9rem;
+}
+
+.container-general-categorias .container-categorias ion-icon[name='trash'] {
+  color: #ee1616;
+  float: right;
+  position: relative;
+  left: 0.5rem;
+  top: 0.2rem;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.container-general-categorias .container-categorias ion-icon[name='trash']:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.container-general-categorias .container-categorias ion-icon[name='remove'], .container-general-categorias .container-categorias ion-icon[name='add'] {
+  float: right;
+  margin-left: .5rem;
+  margin-top: .15rem;
+  color: black;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.container-general-categorias .container-categorias ion-icon[name='remove']:hover, .container-general-categorias .container-categorias ion-icon[name='add']:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.container-general-categorias .container-categorias .item-producto:hover {
+  cursor: pointer;
+}
+
+.container-general-categorias .container-categorias .text-resumen {
+  margin-left: 2.8rem;
+}
+
+.container-general-categorias .botones-imprimir {
+  position: absolute;
+  bottom: 17rem;
+  right: 5.5rem;
+}
+
+.container-general-categorias .botones-imprimir button {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 100% !important;
+  }
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-productos {
+    margin: 0 auto !important;
+  }
+  .text-resumen {
+    margin-top: 5rem;
+    margin-left: 1rem;
+  }
+  .text-categoria {
+    display: none !important;
+  }
+  .botones-imprimir {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 149%;
+    margin: 0 auto;
+  }
+  .txt-print {
+    display: none;
+  }
+}
+
+/* Productos según la categoría */
+.container-productos .list {
+  background: #fff !important;
+}
+
+.container-productos .list .product-button {
+  height: 6rem;
+  border: none;
+}

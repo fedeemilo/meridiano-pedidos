@@ -1,0 +1,119 @@
+/* Categorias de productos */
+
+.container-general-categorias {
+	.container-categorias {
+		.ms {
+			transition: 600ms;
+	
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+			}
+		}
+	
+		.link-categ {
+			text-decoration: none;
+			color: #000000;
+	
+			&:hover {
+				cursor: pointer;
+			}
+	
+			.card {
+				transition: 600ms;
+				&:hover {
+					box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+				}
+			}
+		}
+	
+		.img-categ {
+			width: 100%;
+			height: 9rem;
+		}
+	
+		ion-icon[name='trash'] {
+			color: rgb(238, 22, 22);
+			float: right;
+			position: relative;
+			left: 0.5rem;
+			top: 0.2rem;
+			transition: 600ms;
+	
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.4);
+			}
+		}
+	
+	
+		ion-icon[name='remove'], ion-icon[name='add'] {
+			float: right;
+			margin-left: .5rem;
+			margin-top: .15rem;
+			color: black;
+			transition: 600ms;
+	
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.4);
+			}
+		}
+		
+		.item-producto {
+	
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	
+		.text-resumen {
+			margin-left: 2.8rem;
+		}
+		
+	}
+	
+}
+
+
+
+@media (max-width: 992px) {
+
+	.card {
+		width: 100% !important;
+
+		img {
+			object-fit: cover;
+		}
+	}
+
+	.container-productos {
+		margin: 0 auto !important;
+	}
+
+	.text-resumen {
+		margin-top: 5rem;
+		margin-left: 1rem;
+	}
+
+	.text-categoria {
+		display: none !important;
+	}
+
+	.botones-imprimir {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		top: 149%;   
+		margin: 0 auto;  
+	}
+
+	.txt-print {
+		display: none;
+	}
+
+
+
+	
+}
