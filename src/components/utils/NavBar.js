@@ -1,13 +1,16 @@
 import React from 'react';
 
+import mvLogo from '../../assets/img/mv.svg';
+
 const NavBar = () => {
 	return (
-		<div>
-			<nav className='navbar navbar-light' style={{background: '#C08577'}}>
+		<div className='barra'>
+			<nav className='navbar'>
 				<div className='container-fluid'>
 					<a className='navbar-brand text-white font-weight-bold mx-auto mt-1' href='/'>
-						<h3>Meridiano V</h3>					
+						<img src={mvLogo} alt='mv-logo' className='mv-logo' />					
 					</a>
+				
 				</div>
 			</nav>
 		</div>

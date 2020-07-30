@@ -1,8 +1,9 @@
-import React from 'react';
-import { CategoriasGrid } from './';
+import React, { useState } from 'react';
+import { CategoriasGrid, Footer } from './';
 import { NavBar } from '../utils';
 
 const Main = () => {
+
 
 	return (
 		<div>
@@ -15,6 +16,7 @@ const Main = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

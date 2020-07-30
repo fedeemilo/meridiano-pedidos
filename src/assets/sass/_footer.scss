@@ -1,0 +1,24 @@
+
+
+	nav {
+		@include flexCenter(column);
+		background-color: $azulMeridiano;
+		height: 7rem;
+		color: $blanco;
+        
+        p {
+			bottom: 0;
+        }
+	}
+	
+	.footer-down {
+		position: relative;
+		top: 45vh;
+	}
+
+
+@media only screen and (max-width: 1190px) {
+	.footer-down {
+		top: 55rem !important;
+	}
+}

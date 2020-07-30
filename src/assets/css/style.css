@@ -3,6 +3,54 @@ button {
   outline: none !important;
 }
 
+.barra .mv-logo {
+  margin: 0;
+  width: 4rem;
+  height: 4rem;
+  -webkit-transform: scale(1.54);
+          transform: scale(1.54);
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(1deg) brightness(102%) contrast(105%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(1deg) brightness(102%) contrast(105%);
+}
+
+.barra nav {
+  background-color: #010042;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #010042;
+  height: 7rem;
+  color: #fcf9f8;
+}
+
+nav p {
+  bottom: 0;
+}
+
+.footer-down {
+  position: relative;
+  top: 45vh;
+}
+
+@media only screen and (max-width: 1190px) {
+  .footer-down {
+    top: 55rem !important;
+  }
+}
+
 /* Categorias de productos */
 .container-general-categorias .container-categorias .ms {
   -webkit-transition: 600ms;
@@ -78,17 +126,6 @@ button {
   margin-left: 2.8rem;
 }
 
-.container-general-categorias .botones-imprimir {
-  position: absolute;
-  bottom: 17rem;
-  right: 5.5rem;
-}
-
-.container-general-categorias .botones-imprimir button {
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
 @media (max-width: 992px) {
   .card {
     width: 100% !important;
@@ -137,4 +174,14 @@ button {
 .container-productos .list .product-button {
   height: 6rem;
   border: none;
+}
+
+.overlay {
+  margin-top: 1.3rem;
+  width: 100%;
+  height: 39rem;
+  background: url(../img/mv-fondo.svg) no-repeat center center;
+  background-size: 100% 140%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
