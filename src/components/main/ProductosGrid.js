@@ -4,9 +4,12 @@ import axios from 'axios';
 const ProductosGrid = ({ categoria, selectProducto }) => {
 	const [productos, setProductos] = useState([]);
 
+	// const serverLocal = '';
+	const serverHeroku = 'https://meridiano-pedidos.herokuapp.com';
+
 	useEffect(() => {
 		const fetchProductos = async () => {
-			let res = await axios.get('/productos');
+			let res = await axios.get(`${serverHeroku}/productos`);
 			setProductos((productos) => productos.concat(res.data));
 		};
 

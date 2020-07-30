@@ -15,6 +15,9 @@ const CategoriasGrid = () => {
 	const [pedidoActual, setPedidoActual] = useState({});
 	const [idProducto, setIdProducto] = useState(0);
 
+	// const serverLocal = '';
+	const serverHeroku = 'https://meridiano-pedidos.herokuapp.com';
+
 	let total = 0;
 
 	// Se modifica el texto de la categoría al clickear en una opción de categoría
@@ -102,7 +105,7 @@ const CategoriasGrid = () => {
 		}
 
 		let pedidoActualizado = await axios.put(
-			`/pedidos/${pedidoActual._id}?nombre=${productoElegido}&categoria=${categoriaElegida}&precio=${precioProducto}`
+			`${serverHeroku}/pedidos/${pedidoActual._id}?nombre=${productoElegido}&categoria=${categoriaElegida}&precio=${precioProducto}`
 		);
 
 		setPedidoActual(Object.assign(pedidoActual, pedidoActualizado.data));
@@ -222,7 +225,7 @@ const CategoriasGrid = () => {
 		btnGuardadoAutomatico.classList.remove('disabled');
 		btnBorrarPedido.classList.remove('disabled');
 
-		let pedidoNuevo = await axios.post('/pedidos', { precioTotal: 0 });
+		let pedidoNuevo = await axios.post(`${serverHeroku}/pedidos`, { precioTotal: 0 });
 		setPedidoActual(pedidoNuevo.data);
 	};
 
@@ -251,7 +254,7 @@ const CategoriasGrid = () => {
 		btnGuardarPedido.classList.add('disabled');
 		btnGuardadoAutomatico.classList.add('disabled');
 
-		axios.delete(`/pedidos/${pedidoActual._id}`);
+		axios.delete(`${serverHeroku}/pedidos/${pedidoActual._id}`);
 
 		setTimeout(() => {
 			alertaBorrado.classList.add('d-none');
